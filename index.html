@@ -1,0 +1,198 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link href="https://Blog.feeldream.repl.co/style.css" rel="stylesheet" type="text/css" />
+<head>
+<title>pwede ba tika ma uyab?</title>
+<meta name="description" content="Tapi Kita Akan Putus dalam Waktu">
+<meta name="keywords" content="pwede tika ma uyab?">
+<link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+
+<!--<link href="https://feeldreams.github.io/hayoloh/style.css" rel="stylesheet" type="text/css" />-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+</head>
+<style>
+:root {
+--warna-bg: rgba(0, 0, 0, .3); 
+--warna-teks: #fff;
+--warna-bingkai: #fff;
+--bingkai: 8px;
+--gaya-font: 'Poppins', sans-serif;
+}
+@keyframes fanim {0% {background-position: 0% 0%;}25% {background-position: 100% 100%;} 50% {background-position: 0% 100%;} 75% {background-position: 50% 50%;} 100% {background-position: 0% 0%;}}
+body{background-color:#000;font-family:var(--gaya-font);padding: 20px 25px;-webkit-user-select: none; -ms-user-select: none; user-select: none;} a{text-decoration:none;}
+body::before{content:"\00A9  Rayys | PalingIT";color:white;opacity:0;font-size:10px;position:fixed;bottom:25px;right:25px;z-index:2}
+#bodyblur{opacity:.3;animation: jj 5s infinite;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:-1;transition:all 1s ease;} 
+#wallpaper{transform: scale(1.5);width:100%;height:100%;transition:all 2s ease;}
+#beneranblur{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);-webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);transition:all 3s ease;}
+
+@keyframes jj{0%  {transform: scale(1.1);} 50% {transform: scale(1.2);} 100% {transform: scale(1.1);}}
+@keyframes rts{from {transform:scale(.1);} to {transform:scale(1);}}
+@keyframes rto{from {transform:scale(1);} to {transform:scale(1.1);}}
+@keyframes aniopa{0% {transform: scale(1);} 50% {transform: scale(.75);} 100% {transform: scale(1);}}
+@keyframes rtf{from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes rt{from {transform: scale(.9);/* transform: rotate(-5deg); */} to {transform: scale(1);/* transform: rotate(5deg); */}}
+@keyframes kont{0%  {left:-1px; top:-3px;} 50% {left:1px; top:3px;} 100% {left:-1px; top:-3px;}}
+
+blockquote{opacity:0;visibility:hidden;transform: scale(.1);transition:all 1s ease;position:absolute;margin-top:120px;margin-left:0;margin-right:0;}
+blockquote{width:400px;background:var(--warna-bg);border:1px solid #fff;box-shadow: rgba(255,255,255, 0.15) 0px 7px 29px 0px;border-radius:20%;color:var(--warna-teks);text-shadow: 0px 2px 2px rgba(0, 0, 0, .8);text-align:center;line-height:1.3em;padding:0 25px 0 25px;}
+blockquote img{display:none;background: rgba(255, 255, 255, 0.2);box-shadow: 0 4px 30px rgba(255,255,255, 0.3);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);border: 1px solid rgba(255, 255, 255, 0.3);border-radius:8%;padding:10px;width:100px;height:100px;margin:20px 0 0 0;}
+#inistiker{opacity:.1;margin-bottom:15px;transition:all 1.2s ease;transform: scale(.1);}
+
+p{font-size:17px;font-weight:400;line-height:1.4em;/*text-shadow: 0px 2px 2px rgba(0, 0, 0, .8);*/transition:all .8s ease;}
+#teks{margin-left:20px;margin-right:20px;font-size:17px;font-weight:700;transform:scale(.1);}
+#teksb{font-weight:400;font-size:16px;}
+#teksc{font-size:16px}
+
+#Tombol{position:relative;opacity:0;margin:0;display:flex;align-items:left;list-style:none;transform: scale(.1);transition:all 1s ease;}
+#Tombol a{cursor:pointer;display:inline-flex;align-items:center; margin:0;margin:12px 0 12px 0;transition:all .2s ease;padding:10px;outline:0;border:1px solid var(--warna-bingkai);border-radius:8px;line-height:15px;background:var(--warna-bg);color:var(--warna-teks);font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;box-shadow: rgba(255,255,255, 0.15) 0px 7px 29px 0px;z-index:1} 
+#Tombol a:hover{transform: scale(.90);}
+#buttonv2{position:absolute;font-size:15px;color:white;background:var(--warna-bg);padding:10px;border-radius:8px;line-height:10px;text-shadow: 0px 2px 2px rgba(0, 0, 0, .8);opacity:0}
+#Bn2{position:absolute;opacity:0;width:0}
+
+#Content{animation-name:none;animation-duration: 3s;animation-iteration-count: infinite;position:relative;opacity:0;margin-top:50px;width:100%;height:180px;transition:all .8s ease;}
+#Content > *{display:flex;align-items:center;text-align:center;justify-content:center;margin-top:1px;}
+
+#fotolove img{transition:all .5s ease;width:75px;height:75px;padding:0;background:none}
+#suratin img{display:inline-flex;box-shadow: rgba(255,255,255, 0.5) 0px 7px 29px 0px;background:rgba(255,255,255, 1);border-radius:10%;padding:10px;width:140px;height:110px;transition:all .3s ease;} 
+#ket{text-shadow: 0px 2px 2px rgba(0, 0, 0, .8);color:white}
+#suratin img:hover{transform:scale(.9);}
+
+.swal2-modal > *{font-size:17px;}
+.swal2-title{line-height:1.3em;font-size:17px;text-align:center;padding:15px 50px 0 50px;}
+.swal2-container.swal2-backdrop-show{background: rgba(0,0,0,.5);}
+.swal2-timer-progress-bar-container > *{opacity:.7;background:#00B6FF;margin:0 2px}
+.swal2-modal{box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;max-width:320px;background:rgba(250,250,250,1);border-radius:8px;top:-80px;}
+
+.fa-heart {opacity:.2;color:white;font-size: 24px;position: absolute;animation:  heartMove linear 1;top: -10vh;z-index: 0;}
+@keyframes heartMove {0%{transform: translateY(-10vh) ;} 100%{transform: translateY(100vh) ;}}
+#pesanstiker > *, #pesanAwal, #tgeser, #tklik, #tiya, #linkmp3, #inistiker2, #pesanditolak > *, #teks2, #teksb2, #teksc2, #teks3, #teksb3, #teksc3{display:none}
+</style>
+<body>
+	
+   <!-- Ganti Audio di sini --><audio id="linkmp3">Replay song.mp3</audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="hd wallpaper.jpg" id="wallpaper"/>
+   </div>
+
+   <div id='Content'>
+   	
+     <div id="suratin" onClick="memulai();audio.play();">
+       <!-- Tombol Surat --><img src="https://rayyscoding.github.io/envelope.png"/>
+     </div>
+     <p id="ket">click this☝️</p>
+
+     <div><blockquote id='bq'>
+       <div>
+         <!-- Stiker untuk Konten -->
+         <img src="https://feeldreams.github.io/pusn.gif" id="inistiker"/>
+         <img src="https://feeldreams.github.io/pandacoklat.gif" id="inistiker2"/>
+         <img src="https://feeldreams.github.io/weee.gif" id="inistiker3"/>
+       </div>
+
+       <!-- Konten Pertanyaan -->
+       <p id="teks">pwede ba tika ma uyab? 🤭❤️</p>
+       <p id="teksb"></p>
+       <p id="teksc"></p>
+
+       <!-- Konten Jawaban -->
+       <p id="teks2">yeheyyy! 🤣</p>
+       <p id="teksb2">thank you🥰😘<br>wait</p>
+       <p id="teksc2">countdown: <b id="ctimer">6</b></p>
+
+       <!-- Konten Jawaban 2 -->
+       <p id="teks3">hi love 😘</p>
+       <p id="teksb3">yess uyab nata<br>yeheyyyy 🤣❤️</p>
+       <p id="teksc3">❣️ </p>
+     </blockquote></div>
+
+     <!-- Tombol Multifungsi -->
+     <div id="Tombol">
+       <a id="By" onClick="multifungsi()">
+         <b id="tmbl">Oo🥰</b>
+       </a>
+       
+       <a id="Bn" onClick="ditolak()">dili🙄</a><a id="Bn2" onClick="ditolak2()"></a>
+     </div>
+     
+   </div>
+
+<!-- Jangan Edit Bagian Ini -->
+  <script>
+  ftom=0;jikapr=1;ftganti=0;flag=1;flagg=1;fungsi=0;Bn2.innerHTML=Bn.innerHTML;function showDiv() {pesanwhatsapp = "HAHAHA  ><";Bn2.style.display="none";Content.style = "opacity:1;margin-top:15vh;";ket.style="margin-top:30px";}
+  function memulai(){suratin.style="transition:all .7s ease;transform:scale(10);opacity:0";ket.style="display:none";setTimeout(mulaikonten,500)}
+  function mulaikonten() {otomatis();suratin.style="display:none";Content.style = "opacity:1;margin-top:4vh";wallpaper.style="transform: scale(1);opacity:1;";inistiker.style="display:inline-flex;";setTimeout(ftmuncul,200);bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);border-radius:var(--bingkai);margin-top:0";fungsi=1;setTimeout(tombol,500);}
+  
+  function ftmuncul(){
+    if(ftganti==0){inistiker.style="display:inline-flex;opacity:1;transform:scale(1)";}
+    if(ftganti==1){inistiker.src = inistiker2.src;inistiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==2){inistiker.src = inistiker3.src;inistiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+  }
+  function fthilang(){inistiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";}
+  function jjfoto(){inistiker.style.animation="rto .8s infinite alternate";}
+  
+  function tombol(){Tombol.style="opacity:1;transform: scale(1);";Bn.style="margin:12px 0 12px 12px";ftom=1;}
+  function multifungsi(){if(ftom==1){diterima();} if(ftom==5){menuju();}}
+  async function menuju(){await swals.fire('OK!', 'i love you 🥰😘', 'success'); pesanwhatsapp;Tombol.style="margin-top:15px;opacity:1;transform: scale(1);";} setTimeout(showDiv,100);
+
+  const swalst = Swal.mixin({timer: 2777, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 100,}); audio = new Audio('' + linkmp3.innerHTML);const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+  const body = document.querySelector("body");function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
+  
+  function otomatis() {befanimkata();setTimeout(animkata,400);} 
+  function befanimkata(){teks.style="transform:scale(.3);";teksb.style="transform:scale(.3);";teksc.style="transform:scale(.3);";} 
+  function animkata() {teks.style="transform:scale(1);";teksb.style="transform:scale(1);";teksc.style="transform:scale(1);";}
+  
+  function otomatis2() {befanimkata2();setTimeout(animkata2,400);} 
+  function befanimkata2(){teks.style.opacity="0";teksb.style.opacity="0";teksc.style.opacity="0";} 
+  function animkata2() {teks.innerHTML = teks2.innerHTML;teksb.innerHTML = teksb2.innerHTML;teksc.innerHTML="";teks.style.opacity="1";teksb.style.opacity="1";setTimeout(otomatis2b,3000);}
+  function otomatis2b(){teksb.innerHTML = "";teksc.innerHTML = teksc2.innerHTML;teksc.style.opacity="1";mulaict();}
+  
+  function otomatis3() {befanimkata3();setTimeout(animkata3,400);} 
+  function befanimkata3(){teks.style.opacity="0";teksb.style.opacity="0";teksc.style.opacity="0";} 
+  function animkata3() {teks.innerHTML = teks3.innerHTML;teksb.innerHTML = teksb3.innerHTML;teksc.innerHTML = teksc3.innerHTML + today;teks.style.opacity="1";teksb.style.opacity="1";teksc.style.opacity="1";}
+  
+  function sbakhir(){Bn.style.display="none";setTimeout(stakhir,500);} function stakhir(){tmbl.innerHTML="💌 😍😍😍";Tombol.style="margin-top:10px;opacity:1;transform: scale(1)";ftom=5;fungsi=0;}
+  
+  async function diterima(){
+      fthilang();ftganti=1;
+      setTimeout(ftmuncul,400);
+      Bn2.style.display="none";
+      wallpaper.style="transform: scale(1)";
+      bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);transition:all .7s ease;border-radius:var(--bingkai);margin-top:0;";
+      Tombol.style="opacity:0;transition:all .5s ease;transform: scale(.1);";
+      otomatis2();
+   }
+
+  flag=1;flagg=1;
+  function ditolak(){
+  	if(fungsi==1){
+  	if(flagg==1){Bn.style="margin:12px 0 12px 12px;cursor:default;opacity:0;transition:all 0s ease;";flagg=2;
+                 Bn2.style="width:auto;opacity:1;transition:all .3s ease;margin:160px 0 12px 140px;"}
+  	}
+   }
+  function ditolak2(){
+  	if(fungsi==1){
+  	if(flagg==2){Bn2.style="width:auto;opacity:1;transition:all .3s ease;margin:190px 0 12px 12px;";flagg=3}
+  	    else if(flagg==3){Bn2.style="width:auto;opacity:1;transition:all .3s ease;margin:160px 160px 12px 12px;";flagg=4}
+  		else if(flagg==4){Bn2.style="transition:all .3s ease;margin:12px 0 12px 12px;";Bn.style="margin:12px 0 12px 12px";flagg=1}
+  	    }
+   }
+
+  function mulaict(){
+    var timeleft = 6;
+    ctimer.innerHTML=timeleft;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("ctimer").textContent = timeleft;
+    if(timeleft <= 0)
+      clearInterval(downloadTimer);
+      if(timeleft==0){
+      setInterval(createHeart,200);
+      fthilang();ftganti=2;
+      setTimeout(ftmuncul,400);otomatis3();
+      setTimeout(sbakhir,2000);
+      }
+    },1000);
+  }
+</script>
+<!-- Sampai Sini -->
+</body>
+</html>
